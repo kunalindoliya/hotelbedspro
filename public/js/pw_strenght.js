@@ -45,10 +45,11 @@ function passwordStrengthCheck(password1, password2, passwordsInfo)
 		
 		if(password1.val() !== password2.val())
 		{
-			passwordsInfo.removeClass().addClass('weakpass').html("Passwords do not match!");	
+			passwordsInfo.removeClass().addClass('weakpass').html("Passwords do not match!");
+			$('#signup').attr('disabled',true);
 		}else{
-			passwordsInfo.removeClass().addClass('goodpass').html("Passwords match!");	
+			passwordsInfo.removeClass().addClass('goodpass').html("Passwords match!");
+			$('#signup').removeAttr('disabled')
 		}
-			
 	});
 }

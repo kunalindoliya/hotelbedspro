@@ -7,6 +7,7 @@
 const app = require('./app');
 const debug = require('debug')('hotelbedspro:server');
 const http = require('http');
+const sequelize =  require('./util/database');
 
 /**
  * Get port from environment and store in Express.
@@ -24,10 +25,12 @@ const server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
+sequelize.sync().then(result=>{
+    server.listen(port);
+    server.on('error', onError);
+    server.on('listening', onListening);
+});
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.

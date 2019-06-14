@@ -239,7 +239,7 @@ $('.booking_time').timeDropper({
 });
 
 /* Modal Sign In */
-$('#access_link').magnificPopup({
+$('#sign_in').magnificPopup({
 	type: 'inline',
 	fixedContentPos: false,
 	fixedBgPos: true,

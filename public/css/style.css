@@ -486,7 +486,7 @@ a#access_link, a#wishlist_link{
 }
 
 #wishlist_link:before{content: "\ec5e";}
-#access_link:before{content: "\e97f";}
+#access_link:before{content: "";}
 
 ul#top_links li{
 	display:inline-block;
@@ -679,7 +679,7 @@ ul#cart_items li:last-child span{
 
 /* Footer */
 footer {
-	background: #222 url(../img/pattern.png) repeat 0 0;
+	background: #222 url(/img/pattern.png) repeat 0 0;
 	color: #fff;
 	padding: 30px 0 10px 0;
 }
