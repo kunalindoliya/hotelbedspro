@@ -25,7 +25,10 @@ const server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-sequelize.sync().then(result=>{
+sequelize
+    //.sync({force:true})
+    .sync()
+    .then(result=>{
     server.listen(port);
     server.on('error', onError);
     server.on('listening', onListening);

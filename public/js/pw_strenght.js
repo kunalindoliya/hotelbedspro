@@ -2,10 +2,23 @@ $(document).ready(function() {
 	var password1 		= $('#password1'); //id of first password field
 	var password2		= $('#password2'); //id of second password field
 	var passwordsInfo 	= $('#pass-info'); //id of indicator element
-	
+	var phone = $('#phone');
+
+	phoneCheck(phone);
 	passwordStrengthCheck(password1,password2,passwordsInfo); //call password check function
 	
 });
+function phoneCheck (phone) {
+	var phoneReg = /[0-9\-\(\)\s]+/;
+	$(phone).on('keyup',function(e){
+		if(phone.val().length<10 || phone.val().length >10){
+			$(phone).css('border','1px solid red');
+		}
+		else{
+			$(phone).css('border','1px solid #ced4da');
+		}
+	});
+}
 
 function passwordStrengthCheck(password1, password2, passwordsInfo)
 {

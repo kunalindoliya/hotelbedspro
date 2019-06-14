@@ -12,11 +12,12 @@ exports.postRegister = async (req,res,next)=>{
     const username = req.body.username;
     const email = req.body.email;
     const password = req.body.password;
+    const phone = req.body.phone;
     const user = await User.findOne({where:{[Sequelize.Op.or]:[{email:email} , {username:username}]}});
     if(user){
        return  res.redirect('/register');
     }
     const hash = await bcrypt.hash(password,10);
-    await User.create({username:username,email:email,password:hash});
+    await User.create({username:username,email:email,phone:phone,password:hash});
     res.redirect('/');
 };
