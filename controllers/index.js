@@ -1,9 +1,11 @@
 const bcrypt=require('bcryptjs');
 const User = require('../model/user');
 const Sequelize = require('sequelize');
+const City = require('../model/city');
 
-exports.getIndex=(req,res,next)=>{
-  res.render('index');
+exports.getIndex= async (req,res,next)=>{
+  const cities = await City.findAll();
+  res.render('index',{cities:cities});
 };
 exports.getRegister = (req,res,next)=>{
   res.render('register');

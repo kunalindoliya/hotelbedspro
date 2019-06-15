@@ -177,6 +177,34 @@ $(function () {
 	});
 });
 
+/* Showing Rooms */
+$(function () {
+	$('[name="rooms"]').on('change',function () {
+		let room = parseFloat($(this).children('option:selected').val());
+		if(room === 1) {
+			$(".room2").hide();
+			$(".room3").hide();
+			$(".room4").hide();
+		}
+		if(room === 2) {
+			$(".room2").show();
+			$('.room3').hide();
+			$('.room4').hide();
+		}
+		if(room === 3) {
+			$('.room2').show();
+			$('.room3').show();
+			$('.room4').hide();
+		}
+		if( room ===4) {
+			$('.room2').show();
+			$('.room3').show();
+			$('.room4').show();
+		}
+	});
+});
+
+
 /* Cat nav onclick active */
 $('ul#cat_nav li a').on('click', function () {
 	$('ul#cat_nav li a.active').removeClass('active');

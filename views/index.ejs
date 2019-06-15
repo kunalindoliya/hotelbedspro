@@ -46,19 +46,22 @@
               <label>City</label>
               <select id="city_name" name="city_name" class="form-control">
                 <option disabled selected>Select City</option>
-                <option>kjakjf</option>
-                <option>alkja</option>
-                <option>kljkjja</option>
+               <% for(let city of cities) { %>
+                <option value="<%=city.name%>"><%=city.name%></option>
+                <%}%>
               </select>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label>Preferred city area</label>
-              <select name="area" class="form-control">
-                <option value="Centre" selected>Centre</option>
-                <option value="Gar du Nord Station">Gar du Nord Station</option>
-                <option value="La Defance">La Defance</option>
+              <label>Star Category</label>
+              <select name="star" class="form-control">
+                <option value="any" selected>Any</option>
+                <option value="5">5 Star</option>
+                <option value="4">4 Star</option>
+                <option value="3">3 Star</option>
+                <option value="2">2 Star</option>
+                <option value="1">1 Star</option>
               </select>
             </div>
           </div>
@@ -80,30 +83,120 @@
           <div class="col-md-2 col-sm-3 col-6">
             <div class="form-group">
               <label>Adults</label>
-              <div class="numbers-row">
-                <input type="text" value="1" id="adults" class="qty2 form-control" name="adults_2">
-              </div>
+              <select name="adult" class="form-control">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
             </div>
           </div>
           <div class="col-md-2 col-sm-3 col-6">
             <div class="form-group">
               <label>Children</label>
-              <div class="numbers-row">
-                <input type="text" value="0" id="children" class="qty2 form-control"
-                       name="children_2">
-              </div>
+              <select class="form-control" name="children">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
             </div>
           </div>
           <div class="col-md-2 col-sm-3 col-12">
             <div class="form-group">
               <label>Rooms</label>
-              <div class="numbers-row">
-                <input type="text" value="1" min="1" id="children" class="qty2 form-control" name="rooms">
-              </div>
+              <select class="form-control" name="rooms">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
             </div>
           </div>
         </div>
         <!-- End row -->
+        <!-- Room2 Starts -->
+        <div class="row room2" style="display: none;">
+          <div class="col-md-6"></div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <label>Room 2</label>
+          </div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <div class="form-group">
+              <label>Adults</label>
+              <select class="form-control" name="adultroom2">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <div class="form-group">
+              <label>Children</label>
+              <select class="form-control" name="childrenroom2">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- Room2 Ends -->
+        <!-- Room3 Starts -->
+        <div class="row room3" style="display: none;">
+          <div class="col-md-6"></div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <label>Room 3</label>
+          </div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <div class="form-group">
+              <label>Adults</label>
+              <select class="form-control" name="adultroom3">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <div class="form-group">
+              <label>Children</label>
+              <select class="form-control" name="childrenroom3">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- Room3 ends -->
+        <!-- Room4 Starts -->
+        <div class="row room4" style="display: none;">
+          <div class="col-md-6"></div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <label>Room 4</label>
+          </div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <div class="form-group">
+              <label>Adults</label>
+              <select class="form-control" name="adultroom4">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <div class="form-group">
+              <label>Children</label>
+              <select class="form-control" name="childrenroom4">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- Room4 ends -->
         <hr>
         <button class="btn_1 green"><i class="icon-search"></i>Search now</button>
       </div>
